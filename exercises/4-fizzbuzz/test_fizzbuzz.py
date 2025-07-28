@@ -20,4 +20,3 @@ def test_13_should_return_Fizz():
 
 def test_25_should_return_Buzz():
     assert fizzbuzz(25) == 'Buzz'
-

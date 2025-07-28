@@ -1,5 +1,4 @@
 #Etape 1 et 2
-
 def fizzbuzz(number: int) -> str:
     if number % 3 == 0 and number % 5 == 0:
         return "FizzBuzz"
@@ -11,7 +10,6 @@ def fizzbuzz(number: int) -> str:
         return str(number)
 
 #Etape 3
-
 def compute():
     for i in range(1, 101):
         print(fizzbuzz(i))
