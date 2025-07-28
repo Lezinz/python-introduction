@@ -1,7 +1,5 @@
 from src import fizzbuzz
 
-# def test_fizzbuzz():
-#     assert fizzbuzz(1)
 def test_1_should_return_1():
     assert fizzbuzz(1) == '1'
 
@@ -22,3 +20,4 @@ def test_13_should_return_Fizz():
 
 def test_25_should_return_Buzz():
     assert fizzbuzz(25) == 'Buzz'
+
