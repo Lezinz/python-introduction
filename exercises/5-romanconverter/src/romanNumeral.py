@@ -1,8 +1,11 @@
-from unittest import result
-
+#Ouverture fonction #romanNumeral
 
 def romanNumeral(number: int) -> str:
+    if number > 3999:
+        return "Le chiffre est trop grand"
     result = ""
+
+    #Tableau de valeur (valeur, symbole)
 
     Entier_Romain = [
         (1000, 'M'),
@@ -19,10 +22,16 @@ def romanNumeral(number: int) -> str:
         (4, 'IV'),
         (1, 'I')
     ]
+
+    #Calcul pour trouver le symbole
+
     for valeur, symbole in Entier_Romain:
         while number >= valeur:
             result += symbole
             number -= valeur
 
     return result
+
+def romantoint(symbole: str) -> int:
+    result = ""
 
