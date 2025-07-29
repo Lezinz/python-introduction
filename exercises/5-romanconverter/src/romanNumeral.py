@@ -1,4 +1,6 @@
 #Ouverture fonction #romanNumeral
+from numpy import number
+
 
 def romanNumeral(number: int) -> str:
     if number > 3999:
@@ -33,7 +35,8 @@ def romanNumeral(number: int) -> str:
     return result
 
 def romantoint(symbole: str) -> int:
-    result = ""
+    result = 0
+    i = 0
 
     Romain_Entier = [
         ('M', 1000),
@@ -51,3 +54,11 @@ def romantoint(symbole: str) -> int:
         ('I', 1)
     ]
 
+    while i < len(symbole):
+        for roman, valeur in Romain_Entier:
+            if symbole[i:i+len(roman)] == roman:
+                result += valeur
+                i += len(roman)
+                break
+
+    return result
