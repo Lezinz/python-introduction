@@ -25,4 +25,8 @@ def jn(number: int) -> str:
 
     return resultat
 
-
+try:
+    user_input = int(input("Entrez un nombre entier positif : "))
+    print("Chiffre romain :", jn(user_input))
+except ValueError:
+    print("Entrée invalide. Veuillez entrer un nombre entier.")
