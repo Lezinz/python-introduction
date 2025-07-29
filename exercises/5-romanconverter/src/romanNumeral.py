@@ -56,7 +56,8 @@ def romantoint(symbole: str) -> int:
 
     while i < len(symbole):
         for roman, valeur in Romain_Entier:
-            if symbole[i:i+len(roman)] == roman:
+            end = i + len(roman)
+            if symbole[i:end] == roman:
                 result += valeur
                 i += len(roman)
                 break
