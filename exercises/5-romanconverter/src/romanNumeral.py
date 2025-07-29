@@ -17,4 +17,12 @@ def jn(number: int) -> str:
         (1, 'I'),
     ]
 
+    resultat = ""
+    for (valeur, symbole) in valeurs:
+        count = number // valeur
+        resultat += symbole * count
+        number -= valeur * count
+
+    return resultat
+
 
