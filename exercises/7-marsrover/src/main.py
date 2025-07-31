@@ -4,8 +4,14 @@ from rover import Rover
 carte = Carte()
 rover = Rover(0, 4, "E")
 
-print("Étape 1 : Carte seule")
-carte.afficher_carte()
+commandes = ["⬆️", "➡️", "⬆️", "⬆️", "⬅️", "⬆️"]
 
-print("Étape 2 : Carte avec rover")
+for commande in commandes:
+    if commande == "➡️":
+        rover.tourner_droite()
+    elif commande == "⬅️":
+        rover.tourner_gauche()
+    elif commande == "⬆️":
+        rover.avancer(carte)
+
 carte.afficher_avec_rover(rover)
