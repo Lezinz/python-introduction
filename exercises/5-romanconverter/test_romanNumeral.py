@@ -1,27 +1,36 @@
-from src.romanNumeral import romanNumeral
+from src.romanNumeral import romanNumeral, romantoint
 
-def test_romanNumeral():
+def test_romanNumeral_de_base():
     assert romanNumeral(1) == "I"
-def test_romanNumeral2():
     assert romanNumeral(2) == "II"
-def test_romanNumeral3():
     assert romanNumeral(3) == "III"
-def test_romanNumeral4():
     assert romanNumeral(4) == "IV"
-def test_romanNumeral3999():
+    assert romanNumeral(5) == "V"
+    assert romanNumeral(6) == "VI"
+    assert romanNumeral(9) == "IX"
+    assert romanNumeral(10) == "X"
+    assert romanNumeral(40) == "XL"
+    assert romanNumeral(49) == "XLIX"
+    assert romanNumeral(90) == "XC"
+    assert romanNumeral(400) == "CD"
+    assert romanNumeral(900) == "CM"
+    assert romanNumeral(1987) == "MCMLXXXVII"
     assert romanNumeral(3999) == "MMMCMXCIX"
-def test_romanNumeral4000():
     assert romanNumeral(4000) == "Le chiffre est trop grand"
 
-from src.romanNumeral import romantoint
-
-def test_roman_to_int_I():
+def test_romantoint_de_base():
     assert romantoint("I") == 1
-def test_roman_to_int_II():
     assert romantoint("II") == 2
-def test_roman_to_int_III():
     assert romantoint("III") == 3
-def test_roman_to_int_IV():
     assert romantoint("IV") == 4
-def test_roman_to_int_MMMCMXCIX():
+    assert romantoint("V") == 5
+    assert romantoint("VI") == 6
+    assert romantoint("IX") == 9
+    assert romantoint("X") == 10
+    assert romantoint("XL") == 40
+    assert romantoint("XLIX") == 49
+    assert romantoint("XC") == 90
+    assert romantoint("CD") == 400
+    assert romantoint("CM") == 900
+    assert romantoint("MCMLXXXVII") == 1987
     assert romantoint("MMMCMXCIX") == 3999
