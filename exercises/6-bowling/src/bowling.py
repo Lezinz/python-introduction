@@ -8,18 +8,17 @@ class Bowling:
 
     def get_next_throws(self, i: int) -> str:
         throws = ""
-        idx = i + 1
-        while len(throws) < 2 and idx < len(self.frames):
-            throws += self.frames[idx]
-            idx += 1
+        for j in range(i + 1, len(self.frames)):
+            throws += self.frames[j]
+            if len(throws) >= 2:
+                break
         return throws
 
     def calculate(self) -> int:
         total = 0
         i = 0
-        frame_count = 0
 
-        while frame_count < 10:
+        for frame_count in range(10):
             frame = self.frames[i]
 
             if frame == "X":
@@ -42,7 +41,5 @@ class Bowling:
                 regular = RegularFrame(frame)
                 total += regular.calculate()
                 i += 1
-
-            frame_count += 1
 
         return total
