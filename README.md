@@ -6,8 +6,8 @@
 - 2-addition [====================>] 100% (1/1) - Coverage: 100%
 - 1-hello [====================>] 100% (1/1) - Coverage: 100%
 - 3-reverse [====================>] 100% (1/1) - Coverage: 100%
-- 6-bowling [====================>] 100% (7/7) - Coverage: 93%
-- 5-romanconverter [====================>] 100% (11/11) - Coverage: 100%
+- 6-bowling [====================>] 100% (12/12) - Coverage: 97%
+- 5-romanconverter [====================>] 100% (2/2) - Coverage: 100%
 <!-- END_PROGRESS -->
 
 ## Instructions pour démarrer le projet
